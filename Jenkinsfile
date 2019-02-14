@@ -1,20 +1,12 @@
-pipeline {
-    agent any 
-    stages {
-        stage('---clean---') { 
-            steps {
-                sh "mvn clean" 
-            }
-        }
-        stage('--test--') { 
-            steps {
-                sh "mvn test" 
-            }
-        }
-        stage('--package--') { 
-            steps {
-                sh "mvn package"
-            }
-        }
+node {
+    stage("test") {
+
+        echo "HELLO WORLD"
+        sh "echo 'HELLO'"
     }
+    stage("STAGE 2") {
+        echo "HELLO WORLD"
+        sh "echo 'HELLO'"
+    }   
+
 }
